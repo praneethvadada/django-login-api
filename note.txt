@@ -1,0 +1,32 @@
+curl -X POST http://127.0.0.1:8000/api/signup/ \
+-H "Content-Type: application/json" \
+-d '{"username": "praneeth", "password": "test1234"}'
+
+Response:
+{"token":"c65a315e3db8734a3c1ae9f2ec862ac798775c92"}                                 
+
+
+
+
+
+
+
+curl -X POST http://127.0.0.1:8000/api/login/ \
+-H "Content-Type: application/json" \
+-d '{"username": "praneeth", "password": "test1234"}'
+
+Response:
+{"token":"c65a315e3db8734a3c1ae9f2ec862ac798775c92"}
+
+
+
+
+
+
+
+
+curl -X GET http://127.0.0.1:8000/api/profile/ \
+-H 'Authorization: Token c65a315e3db8734a3c1ae9f2ec862ac798775c92'
+
+Response:
+{"id":1,"username":"praneeth","email":"","first_name":"","last_name":""}
