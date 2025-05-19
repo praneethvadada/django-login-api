@@ -68,6 +68,7 @@ Response:
 
 
 
+
 curl -X POST http://127.0.0.1:8000/api/login/ \
 -H "Content-Type: application/json" \
 -d '{"username": "praneeth", "password": "test1234"}'
@@ -87,5 +88,13 @@ curl -X GET http://127.0.0.1:8000/api/profile/ \
 
 Response:
 {"id":1,"username":"praneeth","email":"","first_name":"","last_name":""}
+
+
+
+
+
+
+
+
 
 
