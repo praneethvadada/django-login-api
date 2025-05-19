@@ -18,7 +18,6 @@ cd authapi
 
 python manage.py startapp users
 
-
 python manage.py makemigrations
 
 python manage.py migrate
