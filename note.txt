@@ -1,10 +1,8 @@
 python -m venv env
 
-
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 ./env/Scripts/Activate.ps1
-
 
 
 
@@ -15,15 +13,23 @@ pip install djangorestframework-simplejwt
 
 
 django-admin startproject authapi
+
 cd authapi
+
 python manage.py startapp users
 
 
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py runserver
 
 
 
 
 
+Project File Structure:
 
 authapi/
 ├── authapi/
@@ -82,3 +88,5 @@ curl -X GET http://127.0.0.1:8000/api/profile/ \
 
 Response:
 {"id":1,"username":"praneeth","email":"","first_name":"","last_name":""}
+
+
