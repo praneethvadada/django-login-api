@@ -55,6 +55,52 @@ authapi/
 
 
 
+
+
+
+
+settings.py
+
+
+
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'rest_framework.authtoken',
+    'users',
+]
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 curl -X POST http://127.0.0.1:8000/api/signup/ \
 -H "Content-Type: application/json" \
 -d '{"username": "praneeth", "password": "test1234"}'
